@@ -4,3 +4,9 @@
 #include <cstring>
 using namespace std;
 
+class Insurance{
+  Protected:
+    int PolicyNumber;
+    char customername [15]
+};
+
