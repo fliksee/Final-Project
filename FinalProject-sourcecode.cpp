@@ -5,9 +5,27 @@
 using namespace std;
 
 class Insurance{
-  Protected:
+  protected:
     int PolicyNumber;
-    char customername [15]
+    char customername [15];
+    int policyvalue;
+    float monthlyPayment;
+    string expiryDate;
+    char status[15];
+public:
+    Insurance(int pn, char* cname, int pv, float mp, string ed, char* s){
+        PolicyNumber = pn;
+        strcpy(customername, cname);
+        policyvalue = pv;
+        monthlyPayment = mp;
+        expiryDate - ed;
+        strcpy(status, s);
+    }
+
+    
+    
+    
 };
+
 
 
