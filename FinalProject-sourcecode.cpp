@@ -1,6 +1,5 @@
 // this project was made by Allyn Novelo and Lizzy Vasquez
 #include <iostream>
-#include <list> 
 #include <cstring>
 using namespace std;
 
@@ -18,14 +17,14 @@ public:
         strcpy(customername, cname);
         policyvalue = pv;
         monthlyPayment = mp;
-        expiryDate - ed;
+        expiryDate = ed;
         strcpy(status, s);
     }
-
+virtual void displayPolicyInfo(){
+    cout << "~~~~ Policy Info ~~~~\n";
+    cout << "Number: "<< PolicyNumber << " | Name: " << customername << "\n"; 
+}
     
     
     
 };
-
-
-
