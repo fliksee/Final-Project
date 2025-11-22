@@ -39,7 +39,7 @@ virtual void renewPolicy(){
 }
 void cancelPolicy(){
    strcpy(status, "Cancelled");
-   cout << "Policy cancelled. \n;
+   cout << "Policy cancelled." \n;
 }
 int getPolicyNumber(){ 
   return PolicyNumber; 
@@ -84,5 +84,6 @@ void renewPolicy() override {//overriding method found in base class
         cout << "Motor policy renewed.\n";
 }
 };
+
 
 
