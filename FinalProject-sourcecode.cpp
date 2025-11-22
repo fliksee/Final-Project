@@ -20,7 +20,7 @@ public:
       expiryDate = "N/A";
       strcpy(status, "Active");
     }
-    Insurance(int pn, char* cname, int pv, float mp, string ed, char* s){//Insurance constructor with parameters
+    Insurance(int pn, const char* cname, int pv, float mp, string ed, const char* s){//Insurance constructor with parameters
         PolicyNumber = pn;
         strcpy(customername, cname);
         policyvalue = pv;
@@ -84,7 +84,3 @@ void renewPolicy() override {//overriding method found in base class
         cout << "Motor policy renewed.\n";
 }
 };
-
-
-
-
