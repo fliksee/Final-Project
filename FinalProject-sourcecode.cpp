@@ -69,18 +69,19 @@ double calculatePremium() override {
         premium += accidentHistory * 50; // $50 per accident
         monthlyPayment = premium / 12;
         return monthlyPayment;
-    }
+}
 void displayPolicyInfo() override {//overriding method found in base class
         Insurance::displayPolicyInfo();
         cout << "Vehicle Type: " << vehicleType << endl;
         cout << "Engine Capacity: " << engineCapacity << " cc\n";
         cout << "Accident History: " << accidentHistory << endl;
         cout << "Coverage Type: " << coverageType << endl;
-    }
+}
 void renewPolicy() override {//overriding method found in base class
         if (strcmp(status, "Expired") == 0)
             monthlyPayment += 20; // late fee
         strcpy(status, "Active");
         cout << "Motor policy renewed.\n";
-    }
+}
 };
+
