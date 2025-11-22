@@ -83,4 +83,39 @@ void renewPolicy() override {//overriding method found in base class
         strcpy(status, "Active");
         cout << "Motor policy renewed.\n";
 }
+double applyAccidentSurcharge() { return accidentHistory * 500.0; }
+};
+
+class HomeInsurance : public Insurance {
+private:
+    char propertyType[30], locationRiskFactor[30];
+    bool securitySystemInstalled, claimsMadeLastTerm;
+public:
+ HomeInsurance(int pn, const char* cn, int pv, float mp, string ed, const char* s, const char* pt, const char* lrf, bool ssi)
+        : Insurance(pn, cn, pv, mp, ed, s), securitySystemInstalled(ssi), claimsMadeLastTerm(false) {
+        strcpy(propertyType, pt);
+        strcpy(locationRiskFactor, lrf);
+        monthlyPayment = calculatePremium() / 12.0;
+    }
+  double calculatePremium() override {
+        double p = policyvalue * 0.005;
+        if (strcmp(locationRiskFactor, "medium") == 0) p *= 1.25;
+        else if (strcmp(locationRiskFactor, "high") == 0) p *= 1.5;
+        if (securitySystemInstalled) p *= 0.85;
+        if (strcmp(propertyType, "commercial") == 0) p *= 1.15;
+        return p;
+    }
+void renewPolicy() override {
+        Insurance::renewPolicy();
+        if (!claimsMadeLastTerm) {
+            double newPrem = calculatePremium() * 0.95;
+            monthlyPayment = newPrem / 12.0;
+            cout << "Discount applied.\n";
+        }
+claimsMadeLastTerm = false;
+    }
+ void displayPolicyInfo() override {
+        Insurance::displayPolicyInfo();
+        cout << "--- Home ---\nType: " << propertyType << " | Risk: " << locationRiskFactor << "\nSecurity: " << (securitySystemInstalled ? "Yes" : "No") << "\n";
+    }
 };
