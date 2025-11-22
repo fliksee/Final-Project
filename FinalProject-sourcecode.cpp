@@ -33,5 +33,20 @@ virtual void displayPolicyInfo(){
     cout << "Number: "<< PolicyNumber << " | Name: " << customername << "\n"; 
 }
 virtual double calculatePremium() = 0; //pure virtual that forces overrride in subclasses 
+virtual void renewPolicy(){
+    strcpy(status, "Active");
+    cout << "Policy renewed. \n";
+}
+void cancelPolicy(){
+   strcpy(status, "Cancelled");
+   cout << "Policy cancelled. \n;
+}
+bool isExpired(){
+    return strcmp(status, "Expired") == 0;
+    cout << "This policy has expired.\n";
+}
+int getPolicyNumber() { return PolicyNumber; }
+const char* getCustomerName() { return customername; }
 };
+
 
