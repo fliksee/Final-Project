@@ -271,9 +271,9 @@ void mainMenu() {
 // Main
 int main() {
     // Dummy data
-    policies[policyCount++] = new MotorInsurance("M-001", "John Smith", 50000.0, 0.0, "15/10/2025", "Active", "car", 1800, 1, "full");
-    policies[policyCount++] = new HomeInsurance("H-002", "Jane Doe", 250000.0, 0.0, "20/11/2026", "Active", "house", "low", true);
-    policies[policyCount++] = new MotorInsurance("M-003", "Test Expired", 10000.0, 0.0, "10/1/2025", "Expired", "motorcycle", 250, 0, "third party");
+    policies[policyCount++] = new MotorInsurance("M-121", "Allyn Novelo", 50600.0, 20.0, "30/12/2025", "Active", "car", 1800, 1, "full");
+    policies[policyCount++] = new HomeInsurance("H-122", "Lizzy Vasquez", 250000.0, 30.0, "26/11/2026", "Active", "house", "low", true);
+    policies[policyCount++] = new MotorInsurance("M-123", "Test Expired", 10000.0, 25.0, "10/1/2025", "Expired", "motorcycle", 250, 0, "third party");
     
     mainMenu();
     
@@ -284,3 +284,4 @@ int main() {
     
     return 0;
 }
+
