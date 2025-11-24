@@ -189,15 +189,15 @@ void addHomePolicy() {
     cout << "Added.\n";
 }
 
-// Menu for adding
+// Menu after hitting add insurance 
 void addNewPolicyMenu() {
     int choice;
     do {
         cout << "\n::::: SELECT INSURANCE TYPE ::::: ";
-        cout << "\n1. Motor";
-        cout << "\n2. Home";
-        cout << "\n3. Life (N/A)";
-        cout<< "\n4. Exit\n";
+        cout << "\n1. Motor Insurance";
+        cout << "\n2. Home Insurance";
+        cout << "\n3. Life Insurance (N/A)";
+        cout<< "\n4. Exit program\n";
         cout << "\nChoice::";
         cin >> choice;
         if (choice == 1) addMotorPolicy();
@@ -289,5 +289,6 @@ int main() {
     
     return 0;
 }
+
 
 
