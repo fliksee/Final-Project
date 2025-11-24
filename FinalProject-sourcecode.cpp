@@ -193,7 +193,12 @@ void addHomePolicy() {
 void addNewPolicyMenu() {
     int choice;
     do {
-        cout << "\n::::: SELECT INSURANCE TYPE :::::\n1. Motor\n2. Home\n3. Life (N/A)\n4. Exit\nChoice: ";
+        cout << "\n::::: SELECT INSURANCE TYPE ::::: ";
+        cout << "\n1. Motor";
+        cout << "\n2. Home";
+        cout << "\n3. Life (N/A)";
+        cout<< "\n4. Exit\n";
+        cout << "\nChoice::";
         cin >> choice;
         if (choice == 1) addMotorPolicy();
         else if (choice == 2) addHomePolicy();
@@ -284,4 +289,5 @@ int main() {
     
     return 0;
 }
+
 
