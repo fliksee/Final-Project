@@ -261,7 +261,14 @@ void renewOrCancelPolicy() {
 void mainMenu() {
     int choice;
     do {
-        cout << "\n=================================================================\n::::: BELIZEAN INSURANCE LTD :::::\n=================================================================\n::::: SELECT MENU OPTION :::::\n\n1. Add New Insurance Policy\n2. View Policy Details\n3. Renew or Cancel Policy\n4. Exit Program\n\nChoice: ";
+        cout << "\n=================================================================\n::::: BELIZEAN INSURANCE LTD :::::";
+           cout<< " \n================================================================= ";
+            cout<< "\n::::: SELECT MENU OPTION :::::\n";
+           cout<< "\n1. Add New Insurance Policy";
+           cout << "\n2. View Policy Details";
+           cout <<  "\n3. Renew or Cancel Policy";
+            cout<< "\n4. Exit Program\n";
+               cout<< "\nChoice: ";
         cin >> choice;
         switch (choice) {
             case 1: addNewPolicyMenu(); break;
@@ -289,6 +296,7 @@ int main() {
     
     return 0;
 }
+
 
 
 
